@@ -23,7 +23,9 @@ jobs:
           distribution: adopt
           java-version: 11
       - name: Test with Gradle
-        run: ./gradlew test
+        run: |
+          chmod +x ./gradlew 
+          ./gradlew test
         continue-on-error: true
       - name: Upload JUnit test results
         uses: actions/upload-artifact@v2
