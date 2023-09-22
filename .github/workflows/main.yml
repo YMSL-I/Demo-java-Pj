@@ -132,7 +132,7 @@ jobs:
 
           ./gradlew javadoc
 
-          ./gradlew generateLicenseReport
+          #./gradlew generateLicenseReport
 
           test_report_dir="build/reports/tests/"
 
@@ -140,7 +140,7 @@ jobs:
 
           javadoc_report_dir="build/docs/javadoc/"
 
-          license_report_dir="build/reports/dependency-license/"
+          #license_report_dir="build/reports/dependency-license/"
 
           mkdir -p public
 
@@ -151,8 +151,8 @@ jobs:
           [ -d "$javadoc_report_dir" ] && mv "$javadoc_report_dir"
           public/javadoc/
 
-          [ -d "$license_report_dir" ] && mv "$license_report_dir"
-          public/license/
+          #[ -d "$license_report_dir" ] && mv "$license_report_dir"
+          #public/license/
 
           cd public/
 
