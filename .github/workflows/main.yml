@@ -26,6 +26,7 @@ jobs:
         run: ./gradlew test
         continue-on-error: true
       - name: Upload JUnit test results
+        uses: actions/upload-artifact@v2
         with:
           name: junit-test-results
           path: build/test-results/test
@@ -58,7 +59,8 @@ jobs:
           java-version: '11'
           distribution: adopt
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@ccb4328a959376b642e027874838f60f8e596de3
+        uses: >-
+          gradle/wrapper-validation-action@ccb4328a959376b642e027874838f60f8e596de3
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
@@ -83,6 +85,9 @@ jobs:
           path: ~/.gradle/caches
           key: '${{ runner.os }}-gradle-${{ hashFiles(''**/*.gradle'') }}'
           restore-keys: '${{ runner.os }}-gradle'
+      #- name: Build and analyze
+        #echo "build succcesfull"
+        #run: ./gradlew build sonar --info
   pages:
     name: Generate pages
     needs:
@@ -103,7 +108,7 @@ jobs:
           distribution: adopt
           java-version: 11
       - name: Generate report
-        run: |
+        run: >
           rm -rf public
 
           ./gradlew test
