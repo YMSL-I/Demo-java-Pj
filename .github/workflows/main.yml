@@ -120,6 +120,8 @@ jobs:
         with:
           distribution: adopt
           java-version: 11
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew 
       - name: Generate report
         run: >
           rm -rf public
