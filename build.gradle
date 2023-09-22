@@ -33,6 +33,7 @@ apply plugin: 'eclipse'
 apply plugin: 'application'
 //apply plugin: 'com.github.jk1.dependency-license-report'
 apply plugin : 'maven-publish'
+apply plugin: 'project-report'
 
 mainClassName = 'hello.HelloWorld'
 
@@ -75,4 +76,6 @@ dependencies {
 			}
 		}
 	}
-
+	htmlDependencyReport {
+	projects = project.allprojects
+	}

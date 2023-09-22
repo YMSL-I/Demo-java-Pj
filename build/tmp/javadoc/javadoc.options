@@ -1,0 +1,8 @@
+-classpath 'C:\\Users\\VE00YM268\\Documents\\A1-solid-code-workspace\\Demo-java-Pj\\build\\classes\\java\\main;C:\\Users\\VE00YM268\\Documents\\A1-solid-code-workspace\\Demo-java-Pj\\build\\resources\\main;C:\\Users\\VE00YM268\\.gradle\\caches\\modules-2\\files-2.1\\joda-time\\joda-time\\2.2\\a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d\\joda-time-2.2.jar'
+-d 'C:\\Users\\VE00YM268\\Documents\\A1-solid-code-workspace\\Demo-java-Pj\\build\\docs\\javadoc'
+-doctitle 'HelloWorld API'
+-notimestamp 
+-quiet 
+-windowtitle 'HelloWorld API'
+'C:\\Users\\VE00YM268\\Documents\\A1-solid-code-workspace\\Demo-java-Pj\\src\\main\\java\\hello\\Greeter.java'
+'C:\\Users\\VE00YM268\\Documents\\A1-solid-code-workspace\\Demo-java-Pj\\src\\main\\java\\hello\\HelloWorld.java'
