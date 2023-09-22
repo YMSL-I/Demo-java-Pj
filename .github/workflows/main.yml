@@ -93,9 +93,13 @@ jobs:
           path: ~/.gradle/caches
           key: '${{ runner.os }}-gradle-${{ hashFiles(''**/*.gradle'') }}'
           restore-keys: '${{ runner.os }}-gradle'
-      #- name: Build and analyze
+      - name: Build and analyze
         #echo "build succcesfull"
         #run: ./gradlew build sonar --info
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Needed to get PR information, if any
+          #SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./gradlew build
   pages:
     name: Generate pages
     needs:
