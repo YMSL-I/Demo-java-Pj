@@ -32,6 +32,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 //apply plugin: 'com.github.jk1.dependency-license-report'
+apply plugin : 'maven-publish'
 
 mainClassName = 'hello.HelloWorld'
 
