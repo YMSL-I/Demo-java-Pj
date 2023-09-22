@@ -109,7 +109,7 @@ jobs:
       - publish
     environment:
       name: github-pages
-      url: '${{ steps.deployment.outputs.page_url }}'
+      url: 'abc.com'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
