@@ -86,7 +86,7 @@ jobs:
           key: '${{ runner.os }}-gradle-${{ hashFiles(''**/*.gradle'') }}'
           restore-keys: '${{ runner.os }}-gradle'
       - name: Build and analyze
-         echo "build succcesfull"
+        #echo "build succcesfull"
         #run: ./gradlew build sonar --info
   pages:
     name: Generate pages
