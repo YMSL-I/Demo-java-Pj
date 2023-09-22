@@ -26,12 +26,9 @@ jobs:
         run: ./gradlew test
         continue-on-error: true
       - name: Upload JUnit test results
-        #uses: actions/upload-artifact@v2
         with:
           name: junit-test-results
           path: build/test-results/test
-
-
   report:
     name: Generate Report
     needs: test
@@ -87,9 +84,6 @@ jobs:
           path: ~/.gradle/caches
           key: '${{ runner.os }}-gradle-${{ hashFiles(''**/*.gradle'') }}'
           restore-keys: '${{ runner.os }}-gradle'
-      #- name: Build and analyze
-        #echo "build succcesfull"
-        #run: ./gradlew build sonar --info
   pages:
     name: Generate pages
     needs:
