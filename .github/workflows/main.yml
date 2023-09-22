@@ -103,7 +103,7 @@ jobs:
           distribution: adopt
           java-version: 11
       - name: Generate report
-        run: >
+        run: |
           rm -rf public
 
           ./gradlew test
