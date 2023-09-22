@@ -78,4 +78,4 @@ dependencies {
 	}
 	htmlDependencyReport {
 	projects = project.allprojects
-	}
+	 }
