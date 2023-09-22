@@ -25,11 +25,16 @@ jobs:
       - name: Test with Gradle
         run: ./gradlew test
         continue-on-error: true
-      - name: Upload JUnit test results
-        uses: actions/upload-artifact@v2
+      #- name: Upload JUnit test results
+        #uses: actions/upload-artifact@v2
+       # with:
+        #  name: junit-test-results
+         # path: build/test-results/test
+      - name: Upload JUnit Results
+        uses: EnricoMi/upload-junit-test-results@v1
         with:
-          name: junit-test-results
-          path: build/test-results/test
+          files: '**/build/test-results/test/TEST-*.xml'
+
   report:
     name: Generate Report
     needs: test
