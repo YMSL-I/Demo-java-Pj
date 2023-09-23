@@ -99,6 +99,6 @@ jobs:
         run: bash ./gradlew build
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Needed to get PR information, if any
-          #SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         
 
