@@ -10,6 +10,9 @@
 /*
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+plugins {
+    id "org.sonarqube" version "3.3"
+}
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
@@ -41,6 +44,14 @@ mainClassName = 'hello.HelloWorld'
 repositories {
     mavenCentral()
 }
+// sonarqube {
+//     properties {
+//         property "sonar.host.url", "http://your-sonarqube-server-url:port" // Replace with your SonarQube server URL
+//         property "sonar.login", "your-sonarqube-token" // Replace with your authentication token or credentials
+//         property "sonar.projectKey", "your-project-key" // Replace with your project key in SonarQube
+//         property "sonar.projectName", "Your Project Name" // Replace with your project's name
+//     }
+// }
 // end::repositories[]
 
 // tag::jar[]
