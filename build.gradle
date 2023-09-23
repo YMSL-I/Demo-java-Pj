@@ -12,6 +12,7 @@
 plugins {
     id "org.sonarqube" version "4.3.1.3277"
 }
+
 apply plugin: 'java'
 
 // In this section you declare where to find the dependencies of your project
@@ -19,6 +20,9 @@ repositories {
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+java {
+	sourceCompatibility = '11'
 }
 // In this section you declare the dependencies for your production and test code
 dependencies {
@@ -64,7 +68,7 @@ jar {
 // end::jar[]
 
 // tag::dependencies[]
-sourceCompatibility = 1.11
+//sourceCompatibility = 1.11
 targetCompatibility = 1.11
 
 dependencies {
