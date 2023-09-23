@@ -48,10 +48,10 @@ repositories {
 sonarqube {
     properties {
         property "sonar.host.url", "https://sonarcloud.io" // Replace with your SonarQube server URL
-        property "sonar.login", "8af6a48ebdda6edc3dbe1ec90e2c1407cb28e33c" // Replace with your authentication token or credentials
+      //  property "sonar.login", "8af6a48ebdda6edc3dbe1ec90e2c1407cb28e33c" // Replace with your authentication token or credentials
         property "sonar.projectKey", "YMSL-I_Demo-java-Pj" // Replace with your project key in SonarQube
 	property "sonar.organization", "ymsl-i"
-        property "sonar.projectName", "Demo-java-Pj" // Replace with your project's name
+      //  property "sonar.projectName", "Demo-java-Pj" // Replace with your project's name
     }
 }
 // end::repositories[]
