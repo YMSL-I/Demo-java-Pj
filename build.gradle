@@ -14,6 +14,8 @@ plugins {
 }
 
 apply plugin: 'java'
+apply plugin: 'org.sonarqube' 
+// version "4.3.1.3277"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
