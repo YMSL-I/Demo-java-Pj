@@ -105,6 +105,10 @@ jobs:
     name: SonarQube Trigger
     runs-on: ubuntu-latest
     steps:
+    - name: Set Default Branch
+      run: |
+          chmod +x ./gradlew 
+          bash ./gradlew sonarqube -Dsonar.branch.name=main
     - name: Checking out
       uses: actions/checkout@master
       with:
