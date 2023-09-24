@@ -9,9 +9,9 @@
 
 /*
 // Apply the java plugin to add support for Java
-plugins {
-    id "org.sonarqube" version "4.3.1.3277"
-}
+// plugins {
+//     id "org.sonarqube" version "4.3.1.3277"
+// }
 
 apply plugin: 'java'
 //apply plugin: 'org.sonarqube' 
@@ -51,18 +51,16 @@ mainClassName = 'hello.HelloWorld'
 repositories {
     mavenCentral()
 }
-sonar {
-    properties {
-        property "sonar.host.url", "https://sonarcloud.io" // Replace with your SonarQube server URL
+//sonar {
+    //properties {
+       // property "sonar.host.url", "https://sonarcloud.io" // Replace with your SonarQube server URL
       //  property "sonar.login", "8af6a48ebdda6edc3dbe1ec90e2c1407cb28e33c" // Replace with your authentication token or credentials
-        property "sonar.projectKey", "YMSL-I_Demo-java-Pj" // Replace with your project key in SonarQube
-	property "sonar.organization", "ymsl-i"
+        //property "sonar.projectKey", "YMSL-I_Demo-java-Pj" // Replace with your project key in SonarQube
+	//property "sonar.organization", "ymsl-i"
       //  property "sonar.projectName", "Demo-java-Pj" // Replace with your project's name
-    }
-}
-// end::repositories[]
+    //}
+//}
 
-// tag::jar[]
 jar {
     baseName = 'jb-hello-world'
     version =  '0.1.0'
@@ -77,9 +75,7 @@ dependencies {
     compile "joda-time:joda-time:2.2"
     testCompile "junit:junit:4.12"
 }
-// end::dependencies[]
 
-// tag::wrapper[]
 //task wrapper(type: Wrapper) {
 //    gradleVersion = '6.8.2'
 //}
